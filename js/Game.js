@@ -2,7 +2,7 @@ class Game {
   constructor(){}
   
   getState(){
-    var gameStateRef  = database.ref('gameState');
+    var gameStateRef  = database.ref('class35/gameState');
     gameStateRef.on("value",function(data){
        gameState = data.val();
     })
@@ -10,7 +10,7 @@ class Game {
   }
 
   update(state){
-    database.ref('/').update({
+    database.ref('/class35').update({
       gameState: state
     });
   }
